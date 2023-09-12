@@ -4,6 +4,11 @@ import 'src/app.dart';
 import 'src/settings/settings_controller.dart';
 import 'src/settings/settings_service.dart';
 
+
+// Team Members!! - run "flutter pub add tflite_flutter" in terminal under this directory.
+
+import 'package:tflite_flutter/tflite_flutter.dart';
+
 void main() async {
   // Set up the SettingsController, which will glue user settings to multiple
   // Flutter Widgets.
