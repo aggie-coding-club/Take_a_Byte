@@ -1,0 +1,6 @@
+{
+  "appTitle": "take_a_byte",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
