@@ -21,5 +21,7 @@ params = {
 
 fetch = requests.get(f"https://api.nal.usda.gov/fdc{type}/?api_key={params[key]}&query={params['query']}")
 response = fetch.json() 
-print(response)
+json_formatted_str = json.dumps(response, indent=2)
+
+print(json_formatted_str)
 #this does not format well rn, just a mess of info
