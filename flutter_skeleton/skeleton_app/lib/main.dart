@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skeleton_app/routes/locator_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        //'/camera': (context) => const camera_screen(),
+        '/locator': (context) => const locatorScreen(),
+      },
+      home: const locatorScreen(),
     );
   }
 }
