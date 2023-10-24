@@ -11,35 +11,9 @@ class locatorScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Take A Byte'),
+        centerTitle: true,
       ),
-      bottomNavigationBar: GNav(
-          color: Colors.white,
-          backgroundColor: Color.fromARGB(255, 203, 104, 18),
-          activeColor: Color.fromARGB(255, 255, 198, 146),
-          gap: 8,
-          tabs: [
-            GButton(
-              icon: Icons.home,
-              text: 'Home',
-            ),
-            GButton(
-              icon: Icons.camera,
-              text: 'Scan Food',
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => cameraScreen()),
-                );
-              },
-            ),
-            GButton(
-              icon: Icons.settings,
-              text: 'Settings',
-            ),
-          ]),
+      bottomNavigationBar: footerMenu(),
     );
   }
 }
-
-
-//routes/footer_menu.dart'
