@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:skeleton_app/routes/locator_screen.dart';
 
+//default flutter setup, just used to access actual app functionality
+
 void main() {
   runApp(const MyApp());
 }
