@@ -1,1 +1,0 @@
- E:\\FlutterProjects\\Take-a-Byte\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations_en.dart E:\\FlutterProjects\\Take-a-Byte\\.dart_tool\\flutter_gen\\gen_l10n\\app_localizations.dart:  E:\\FlutterProjects\\Take-a-Byte\\l10n.yaml E:\\FlutterProjects\\Take-a-Byte\\lib/src/localization\\app_en.arb
