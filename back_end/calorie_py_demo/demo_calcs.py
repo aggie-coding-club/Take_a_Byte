@@ -57,11 +57,9 @@ def scaleNutrients(ratio):
 
     return
 
-def updateTrackers():       #void function to update the nutrients based on portion size
-
-
-
-    return
+# #TODO: void function to update the nutrients based on portion size
+# def updateTrackers():
+#     return
 
 rat = getPortionRatio()
 scaleNutrients(rat)
