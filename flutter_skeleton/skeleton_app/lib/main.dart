@@ -1,132 +1,456 @@
 import 'package:flutter/material.dart';
-import 'package:skeleton_app/routes/locator_screen.dart';
 
-//default flutter setup, just used to access actual app functionality
-
-void main() {
-  runApp(const MyApp());
+class HomeWidget extends StatefulWidget {
+  @override
+  _HomeWidgetState createState() => _HomeWidgetState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      routes: {
-        //'/camera': (context) => const camera_screen(),
-        '/locator': (context) => const locatorScreen(),
-      },
-      home: const locatorScreen(),
-    );
-  }
-}
+    // Figma Flutter Generator HomeWidget - FRAME
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+    return Container(
+        width: 430,
+        height: 932,
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(255, 255, 255, 1),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        child: Stack(children: <Widget>[
+          Positioned(top: 54, left: 14.028854370117188, child: Text("Hello")),
+          Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                  width: 430,
+                  height: 71,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(153, 128, 128, 1),
+                  ))),
+          Positioned(
+              top: 862,
+              left: 0,
+              child: Container(
+                  width: 430,
+                  height: 71,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(153, 128, 128, 1),
+                  ))),
+          Positioned(
+              top: 0,
+              left: 133,
+              child: Container(
+                  width: 153,
+                  height: 71,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/Byte_chocolate2.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 62,
+              left: 64,
+              child: Text(
+                'Recent Meals',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 62,
+              left: 64,
+              child: Text(
+                'Recent Meals',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 12,
+              left: 368,
+              child: Container(
+                  width: 47,
+                  height: 47,
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Color.fromRGBO(0, 0, 0, 0.25),
+                          offset: Offset(0, 4),
+                          blurRadius: 4)
+                    ],
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/5588341.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 132,
+              left: 24,
+              child: Container(
+                  width: 382,
+                  height: 173,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(247, 239, 239, 1),
+                  ))),
+          Positioned(
+              top: 308,
+              left: 24,
+              child: Container(
+                  width: 382,
+                  height: 173,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(247, 239, 239, 1),
+                  ))),
+          Positioned(
+              top: 484,
+              left: 24,
+              child: Container(
+                  width: 382,
+                  height: 173,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(247, 239, 239, 1),
+                  ))),
+          Positioned(
+              top: 660,
+              left: 24,
+              child: Container(
+                  width: 382,
+                  height: 173,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(247, 239, 239, 1),
+                  ))),
+          Positioned(
+              top: 155,
+              left: 37,
+              child: Container(
+                  width: 159,
+                  height: 127,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/16159165245671.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 331,
+              left: 37,
+              child: Container(
+                  width: 159,
+                  height: 127,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/16159165245672.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 507,
+              left: 37,
+              child: Container(
+                  width: 159,
+                  height: 127,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/16159165245673.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 683,
+              left: 37,
+              child: Container(
+                  width: 159,
+                  height: 127,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/16159165245674.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 135,
+              left: 196,
+              child: Text(
+                'Pasta',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 311,
+              left: 196,
+              child: Text(
+                'Pasta',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 487,
+              left: 196,
+              child: Text(
+                'Pasta',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 663,
+              left: 196,
+              child: Text(
+                'Pasta',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 36,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 168,
+              left: 185,
+              child: Text(
+                'Calories: 620',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 344,
+              left: 185,
+              child: Text(
+                'Calories: 620',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 520,
+              left: 185,
+              child: Text(
+                'Calories: 620',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 696,
+              left: 185,
+              child: Text(
+                'Calories: 620',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 199,
+              left: 185,
+              child: Text(
+                'Protein: 5g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 375,
+              left: 185,
+              child: Text(
+                'Protein: 5g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 551,
+              left: 185,
+              child: Text(
+                'Protein: 5g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 727,
+              left: 185,
+              child: Text(
+                'Protein: 5g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 230,
+              left: 185,
+              child: Text(
+                'Carbs: 20g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 406,
+              left: 185,
+              child: Text(
+                'Carbs: 20g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 582,
+              left: 185,
+              child: Text(
+                'Carbs: 20g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 758,
+              left: 185,
+              child: Text(
+                'Carbs: 20g',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1),
+                    fontFamily: 'Poppins',
+                    fontSize: 20,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 838,
+              left: 150,
+              child: Container(
+                  width: 119,
+                  height: 119,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(153, 128, 128, 1),
+                    borderRadius: BorderRadius.all(Radius.elliptical(119, 119)),
+                  ))),
+          Positioned(
+              top: 855,
+              left: 174,
+              child: Container(
+                  width: 72,
+                  height: 72,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage(
+                            'assets/images/584abf432912007028bd93371.png'),
+                        fit: BoxFit.fitWidth),
+                  ))),
+          Positioned(
+              top: 13,
+              left: 12,
+              child: Text(
+                '🔍',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontFamily: 'Inter',
+                    fontSize: 49,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+        ]));
   }
 }
