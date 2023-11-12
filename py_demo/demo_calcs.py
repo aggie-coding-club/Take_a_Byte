@@ -63,6 +63,6 @@ def updateTrackers():       #void function to update the nutrients based on port
 
     return
 
-rat = getPortionRatio()
-scaleNutrients(rat)
+ratioed = getPortionRatio()
+scaleNutrients(ratioed)
 print(scaledNutrition)
