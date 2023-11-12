@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skeleton_app/routes/home_screen.dart';
 import 'package:skeleton_app/routes/locator_screen.dart';
 
 //default flutter setup, just used to access actual app functionality
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         //'/camera': (context) => const camera_screen(),
-        '/locator': (context) => const locatorScreen(),
+        '/locator': (context) => const homeScreen(),
       },
       home: const locatorScreen(),
     );
