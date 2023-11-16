@@ -61,6 +61,6 @@ def scaleNutrients(ratio):
 # def updateTrackers():
 #     return
 
-rat = getPortionRatio()
-scaleNutrients(rat)
+ratioed = getPortionRatio()
+scaleNutrients(ratioed)
 print(scaledNutrition)

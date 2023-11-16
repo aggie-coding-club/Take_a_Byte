@@ -8,6 +8,8 @@ import 'package:skeleton_app/routes/locator_screen.dart';
 //it is used as a common class across all screens in order
 //to maintain a consistent footer
 
+//TODO: make camera button work well
+
 class footerMenu extends StatelessWidget {
   const footerMenu({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class footerMenu extends StatelessWidget {
         color: Colors.white,
         backgroundColor: Color.fromARGB(255, 203, 104, 18),
         activeColor: Color.fromARGB(255, 255, 198, 146),
-        gap: 8,
+        //gap: 8,
         tabs: [
           GButton(
             icon: Icons.home,
