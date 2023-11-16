@@ -8,6 +8,8 @@ import 'package:skeleton_app/routes/TF_screen.dart';
 //individual barcode and food scan logistics as well as figure out how
 //to access the camera
 
+//TODO: round up figma code
+
 class cameraScreen extends StatelessWidget {
   const cameraScreen({Key? key}) : super(key: key);
 
