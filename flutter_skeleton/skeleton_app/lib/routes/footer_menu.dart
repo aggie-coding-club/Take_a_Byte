@@ -3,6 +3,8 @@ import 'package:skeleton_app/routes/footer_menu.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:skeleton_app/routes/camera_screen.dart';
 import 'package:skeleton_app/routes/locator_screen.dart';
+import 'package:skeleton_app/routes/settings_screen.dart';
+import 'package:skeleton_app/routes/settings_screen.dart';
 
 //This is the footer bar, it still has bugs to work out
 //it is used as a common class across all screens in order
@@ -17,8 +19,8 @@ class footerMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return GNav(
         color: Colors.white,
-        backgroundColor: Color.fromARGB(255, 203, 104, 18),
-        activeColor: Color.fromARGB(255, 255, 198, 146),
+        backgroundColor: const Color.fromARGB(255, 203, 104, 18),
+        activeColor: const Color.fromARGB(255, 255, 198, 146),
         //gap: 8,
         tabs: [
           GButton(
@@ -27,7 +29,7 @@ class footerMenu extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => locatorScreen()),
+                MaterialPageRoute(builder: (context) => const locatorScreen()),
               );
             },
           ),
@@ -37,13 +39,19 @@ class footerMenu extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => cameraScreen()),
+                MaterialPageRoute(builder: (context) => const cameraScreen()),
               );
             },
           ),
           GButton(
             icon: Icons.settings,
             text: 'Settings',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsScreen()),
+              );
+            },
           ),
         ]);
   }
