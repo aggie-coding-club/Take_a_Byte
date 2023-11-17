@@ -12,8 +12,8 @@ to each image class I've generated via discord. For food images and whatnot,
 some communication with the camera page and the transfer of images will probably
 be needed. */
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +139,15 @@ class Home extends StatelessWidget {
               Positioned(
                 left: 368,
                 top: 12,
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                  Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScreen()), //To be replaced by settings page location?? None currently.
+                    
+                );
+              },
+              child: Container(
                   width: 47,
                   height: 47,
                   decoration: const BoxDecoration(
@@ -159,6 +167,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
               Positioned(
                 left: 24,
                 top: 132,
@@ -615,4 +624,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
